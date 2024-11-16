@@ -1,0 +1,12 @@
+super + w
+  $BROWSER
+super + p
+  maim -s ~/Photos/screenshot_\$(date +%Y-%m-%d_%H-%M-%S).png
+super + space
+  layout.sh
+super + shift + e
+  exit.sh
+super + {equal, minus, BackSpace}
+  volume.sh {up, down, toggle}
+super + {f1, f2}
+  brightness.sh {inc, dec}
