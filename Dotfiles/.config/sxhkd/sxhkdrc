@@ -2,8 +2,6 @@ super + w
   $BROWSER
 super + p
   maim -s ~/Photos/screenshot_\$(date +%Y-%m-%d_%H-%M-%S).png
-super + space
-  layout.sh
 super + shift + e
   exit.sh
 super + {equal, minus, BackSpace}

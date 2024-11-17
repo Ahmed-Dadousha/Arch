@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 # Enable Vim Mode
 #bindkey -v
-#set KEYTIMEOUT=1
+#export KEYTIMEOUT=1
 # ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
