@@ -103,9 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(zoxide init zsh)"
-# Enable Vim Mode
-#bindkey -v
-#export KEYTIMEOUT=1
+eval "$(starship init zsh)"
 # ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -120,6 +118,7 @@ alias u="doas pacman -Syu --noconfirm"
 alias q="pacman -Qs"
 alias cd="z"
 alias cat=bat
+
 # File Manager Function
 function fm() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -132,9 +131,29 @@ function fm() {
 # File Manager Widget
 zle -N fmw fm
 # File Manager Keybind
-bindkey  "^[[102;9u" "fmw"
+bindkey -M vicmd "^[[102;9u" "fmw"
 # Starship Prompt
 #type starship_zle-keymap-select >/dev/null || \
 #  {
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 #  }
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Yank to the system clipboard
+function vi-yank-xclip {
+    zle vi-yank
+   print -n -- "$CUTBUFFER" | xclip -selection clipboard
+}
+zle -N vi-yank-xclip
+bindkey -M vicmd 'y' vi-yank-xclip
+
+# paste from system clipboard
+function vi-paste-xclip {
+        #zle vi-paste
+        zle -U "$(xclip -o -selection clipboard)"
+}
+zle -N vi-paste vi-paste-xclip
+bindkey -M vicmd 'p' vi-paste
