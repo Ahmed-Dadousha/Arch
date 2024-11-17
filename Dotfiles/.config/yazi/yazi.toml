@@ -1,0 +1,19 @@
+[plugin]
+prepend_previewers = [
+	{mime = "text/*", run = "bat" }
+]
+
+[opener]
+play = [
+	{run = 'smplayer "$@" &> /dev/null', block = true, for = "linux"},
+]
+edit = [
+	{run = 'nvim "$@"', block = true, for = "linux"},
+]
+
+[open]
+rules = [
+	{mime = "video/*", use = "play"},
+	{mime = "audio/*", use = "play"},
+	{mime = "text/*",  use = "edit"},
+]
