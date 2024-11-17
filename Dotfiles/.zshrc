@@ -104,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(zoxide init zsh)"
 # Enable Vim Mode
-bindkey -v
+#bindkey -v
+#set KEYTIMEOUT=1
 # ZSH Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -131,9 +132,9 @@ function fm() {
 # File Manager Widget
 zle -N fmw fm
 # File Manager Keybind
-bindkey -M vicmd "^[[102;9u" "fmw"
+bindkey  "^[[102;9u" "fmw"
 # Starship Prompt
-type starship_zle-keymap-select >/dev/null || \
-  {
-    eval "$(starship init zsh)"
-  }
+#type starship_zle-keymap-select >/dev/null || \
+#  {
+eval "$(starship init zsh)"
+#  }
