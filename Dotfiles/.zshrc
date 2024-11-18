@@ -151,9 +151,9 @@ zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
 
 # paste from system clipboard
-function vi-paste-xclip {
-        #zle vi-paste
-        zle -U "$(xclip -o -selection clipboard)"
-}
-zle -N vi-paste vi-paste-xclip
-bindkey -M vicmd 'p' vi-paste
+#function vi-paste-xclip {
+#        #zle vi-paste
+#        zle -U "$(xclip -o -selection clipboard)"
+#}
+#zle -N vi-paste vi-paste-xclip
+#bindkey -M vicmd 'p' vi-paste
