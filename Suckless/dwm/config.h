@@ -15,7 +15,7 @@ static const int splitstatus        = 1;        /* 1 for split status items */
 static const char *splitdelim        = ";";       /* Character used for separating status */
 static const char *fonts[]          = { "MesloLGS NF:size=10" };
 static const char dmenufont[]       = "MesloLGS NF:size=10";
-static const char col_gray1[]       = "#1a1b26"; //"#222222"
+static const char col_gray1[]       = "#24283b";//"#1a1b26"; //"#222222"
 static const char col_gray2[]       = "#7dcfff"; //"#444444"
 static const char col_gray3[]       = "#a9b1d6"; //"#bbbbbb"
 static const char col_gray4[]       = "#ebdbb2"; // "#3d59a1"; //"#eeeeee"
@@ -23,7 +23,7 @@ static const char col_cyan[]        = "#394b70"; //"#7aa2f7"; //"#3c3836"
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_gray2 },
+	[SchemeSel]  = { col_gray2, col_gray1,  col_gray2 },
 };
 
 static const char *const autostart[] = {
