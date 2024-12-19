@@ -24,7 +24,7 @@ return {
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.formatting.shellharden,
-				null_ls.builtins.formatting.clang_format,
+				--null_ls.builtins.formatting.clang_format,
 				require("none-ls.diagnostics.eslint_d"),
 			},
 		})
