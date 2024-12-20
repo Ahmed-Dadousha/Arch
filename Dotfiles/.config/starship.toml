@@ -5,6 +5,7 @@ $hostname\
 [ in ](fg:#ff7f50)\
 $directory\
 $git_branch\
+$git_metrics\
 $git_status\
 $fill\
 $cmd_duration\
@@ -18,6 +19,9 @@ vimcmd_symbol = '[❮](bold yellow)'
 
 [git_branch]
 format = '[ at ](fg:#ff7f50)[$branch]($style) '
+
+[git_metrics]
+disabled = false
 
 [hostname]
 ssh_only = false
