@@ -6,5 +6,7 @@ super + shift + e
   exit.sh
 super + {equal, minus, BackSpace}
   volume.sh {up, down, toggle}
-super + {f1, f2}
+super + f
+  kitty -e yazi
+super + {F1, F2}
   brightness.sh {inc, dec}
