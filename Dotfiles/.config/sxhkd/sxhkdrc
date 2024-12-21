@@ -8,5 +8,7 @@ super + {equal, minus, BackSpace}
   volume.sh {up, down, toggle}
 super + f
   kitty -e yazi
+super + b
+  burpsuite
 super + {F1, F2}
   brightness.sh {inc, dec}
