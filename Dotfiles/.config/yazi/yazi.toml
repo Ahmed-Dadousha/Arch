@@ -2,9 +2,6 @@
 linemode = "size"
 show_symlink = true
 
-[manager]
-linemode = "size"
-
 [plugin]
 prepend_previewers = [
 	{mime = "text/*", run = "bat" }
