@@ -109,7 +109,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#808080'
 unalias -a
-alias ls="lsd -lah"
+alias ls="lsd -F"
+alias ll="lsd -lahF"
 alias cls=clear
 alias i="doas pacman -S --noconfirm --needed" 
 alias r="doas pacman -Rsc --noconfirm"
@@ -131,7 +132,7 @@ function fm() {
 # File Manager Widget
 zle -N fmw fm
 # File Manager Keybind
-bindkey -M vicmd "^[[102;9u" "fmw"
+#bindkey -M vicmd "^[[102;9u" "fmw"
 # Starship Prompt
 #type starship_zle-keymap-select >/dev/null || \
 #  {
