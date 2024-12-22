@@ -1,11 +1,11 @@
 [manager]
 linemode = "size"
 show_symlink = true
+ratio = [2,4,3]
 
-[plugin]
-prepend_previewers = [
-	{mime = "text/*", run = "bat" }
-]
+[preview]
+max_width  = 1500
+max_height = 1500
 
 [opener]
 play = [
