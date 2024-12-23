@@ -121,7 +121,7 @@ alias cd="z"
 alias cat=bat
 
 # File Manager Function
-function fm() {
+function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
@@ -130,7 +130,7 @@ function fm() {
 	rm -f -- "$tmp"
 }
 # File Manager Widget
-zle -N fmw fm
+#zle -N fmw fm
 # File Manager Keybind
 #bindkey -M vicmd "^[[102;9u" "fmw"
 # Starship Prompt
