@@ -123,7 +123,7 @@ alias vim=nvim
 alias dvim="doas nvim"
 alias srv="ssh adosha@hs.lan"
 export TERM=xterm-256color
-
+export FZF_DEFAULT_COMMAND='find . -type f'
 # File Manager Function
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
