@@ -9,7 +9,7 @@ max_height = 1500
 
 [opener]
 play = [
-	{run = 'smplayer "$@" &> /dev/null', block = true, for = "linux"},
+	{run = 'vlc "$@" &> /dev/null', block = true, for = "linux"},
 ]
 edit = [
 	{run = 'nvim "$@"', block = true, for = "linux"},

@@ -119,6 +119,10 @@ alias u="doas pacman -Syu --noconfirm"
 alias q="pacman -Qs"
 alias cd="z"
 alias cat=bat
+alias vim=nvim
+alias dvim="doas nvim"
+alias srv="ssh adosha@hs.lan"
+export TERM=xterm-256color
 
 # File Manager Function
 function y() {

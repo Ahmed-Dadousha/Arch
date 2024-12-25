@@ -8,12 +8,12 @@ static int min_width = 500;                    /* minimum width when centered */
 static const float menu_height_ratio = 2.0f;  /* This is the ratio used in the original calculation */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"MesloLGS NF:size=11"
+	"MesloLGS NF:size=15"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#a9b1d6", "#24283b" }, //{"#1a1b26" ,"#ebdbb2", "#282828"},
+	[SchemeNorm] = { "#a9b1d6", "#24283b" }, //{"#1a1b26",#24283b ,"#ebdbb2", "#282828"},
 	[SchemeSel] = {"#ebdbb2", "#7aa2f7"} , //{ "#ebdbb2", "#98971a" },
 	[SchemeOut] = { "#ebdbb2", "#8ec07c" },
 	[SchemeSelHighlight] = { "#ffc978", "#005577" },

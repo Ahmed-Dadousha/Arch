@@ -13,8 +13,8 @@ static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 static const int splitstatus        = 1;        /* 1 for split status items */
 static const char *splitdelim        = ";";       /* Character used for separating status */
-static const char *fonts[]          = { "MesloLGS NF:size=10" };
-static const char dmenufont[]       = "MesloLGS NF:size=10";
+static const char *fonts[]          = { "MesloLGS NF:size=15" };
+static const char dmenufont[]       = "MesloLGS NF:size=15";
 static const char col_gray1[]       = "#24283b";//"#1a1b26"; //"#222222"
 static const char col_gray2[]       = "#7dcfff"; //"#444444"
 static const char col_gray3[]       = "#a9b1d6"; //"#bbbbbb"
