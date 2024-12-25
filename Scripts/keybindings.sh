@@ -1,5 +1,5 @@
 data=$(
-	cat <<-EOF
+    cat <<-EOF
 		      Keybinding                                   Difinition
 		      # System Keybindings [Super = Enter]
 		      super + w                                    Open Browser.
@@ -39,7 +39,8 @@ data=$(
 		      # Terminal [Kitty]
 		      super + shift + equal                       Increase Font Size.
 		      super + shift + minus                       Decrease Font Size.
-
+		      ctrl  + shift + up                          Scroll up.
+		      ctrl  + shift + down                        Scroll down.
 	EOF
 )
 
