@@ -1,5 +1,5 @@
 data=$(
-    cat <<-EOF
+	cat <<-EOF
 		      Keybinding                                   Difinition
 		      # System Keybindings [Super = Enter]
 		      super + w                                    Open Browser.
@@ -26,8 +26,8 @@ data=$(
 		      super + shift + Enter                        Move a Terminal To Stack.
 
 		      # Tmux [Prefix = Ctrl + b]
-		      Prefix + |                                  Split Vertical.
-		      Perfix + -                                  Split Horizontal.
+		      Prefix + |                                  Split Horizontal.
+		      Perfix + -                                  Split Vertical.
 		      Perfix + r                                  Reload Configurations.
 		      Perfix + m                                  Minimize or Maximize.
 		      Perfix + I                                  Install Plugins.
@@ -35,6 +35,10 @@ data=$(
 		      Ctrl + l                                    Change Focus To Right.
 		      Ctrl + j                                    Change Focus To Down.
 		      Ctrl + k                                    Change Focus To Up.
+
+		      # Terminal [Kitty]
+		      super + shift + equal                       Increase Font Size.
+		      super + shift + minus                       Decrease Font Size.
 
 	EOF
 )
