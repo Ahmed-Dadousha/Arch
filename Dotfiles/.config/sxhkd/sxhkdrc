@@ -10,5 +10,7 @@ super + f
   kitty -e yazi
 super + b
   burpsuite
+super + shift + m
+  keybindings.sh
 super + {F1, F2}
   brightness.sh {inc, dec}
