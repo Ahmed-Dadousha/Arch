@@ -1,46 +1,47 @@
 data=$(
     cat <<-EOF
-		      Keybinding                                   Difinition
-		      # System Keybindings [Super = Enter]
-		      super + w                                    Open Browser.
-		      super + f                                    File Manager.
-		      super + b                                    Open Burpsuite.
-		      super + p                                    Take a Screenshot With Selection.
-		      super + equal or minus or backspace          Volume.
-		      super + shift + e                            Exit Machine.
-		      super + F1 or F2                             Brightness.
+		Category        Keybinding                                   Difinition
+		# System Keybindings [Super = Enter]
+		System super + w                                    Open Browser.
+		System super + f                                    File Manager.
+		System super + b                                    Open Burpsuite.
+		System super + shift + b                            Toggle Top bar.
+		System super + p                                    Take a Screenshot With Selection.
+		System super + equal or minus or backspace          Volume.
+		System super + shift + e                            Exit Machine.
+		System super + F1 or F2                             Brightness.
 
-		      # DWM Keybindings [Super = Enter]
-		      super + d                                    Run Dmenu.
-		      super + j                                    Change Focus.
-		      super + k                                    Change Focus.
-		      super + Enter                                Open a Terminal.
-		      super + tab                                  Switch Workspaces.
-		      super + shift + c                            kill a Window.
-		      super + shift + b                            Toggle Top Bar.
-		      super + shift + q                            Kill DWM.
-		      super + shift + j                            Move a Window Down In Stack.
-		      super + shift + k                            Move a Window Up In Stack.
-		      super + shift + l                            Increase Left Window Size In Stack.
-		      super + shift + h                            Increase Right Window Size In Stack.
-		      super + shift + Enter                        Move a Terminal To Stack.
+		# DWM Keybindings [Super = Enter]
+		DWM super + d                                    Run Dmenu.
+		DWM super + j                                    Change Focus.
+		DWM super + k                                    Change Focus.
+		DWM super + Enter                                Open a Terminal.
+		DWM super + tab                                  Switch Workspaces.
+		DWM super + shift + c                            kill a Window.
+		DWM super + shift + b                            Toggle Top Bar.
+		DWM super + shift + q                            Kill DWM.
+		DWM super + shift + j                            Move a Window Down In Stack.
+		DWM super + shift + k                            Move a Window Up In Stack.
+		DWM super + shift + l                            Increase Left Window Size In Stack.
+		DWM super + shift + h                            Increase Right Window Size In Stack.
+		DWM super + shift + Enter                        Move a Terminal To Stack.
 
-		      # Tmux [Prefix = Ctrl + b]
-		      Prefix + |                                  Split Horizontal.
-		      Perfix + -                                  Split Vertical.
-		      Perfix + r                                  Reload Configurations.
-		      Perfix + m                                  Minimize or Maximize.
-		      Perfix + I                                  Install Plugins.
-		      Ctrl + h                                    Change Focus To Left.
-		      Ctrl + l                                    Change Focus To Right.
-		      Ctrl + j                                    Change Focus To Down.
-		      Ctrl + k                                    Change Focus To Up.
+		# Tmux [Prefix = Ctrl + b]
+		Tmux Prefix + |                                  Split Horizontal.
+		Tmux Perfix + -                                  Split Vertical.
+		Tmux Perfix + r                                  Reload Configurations.
+		Tmux Perfix + m                                  Minimize or Maximize.
+		Tmux Perfix + I                                  Install Plugins.
+		Tmux Ctrl + h                                    Change Focus To Left.
+		Tmux Ctrl + l                                    Change Focus To Right.
+		Tmux Ctrl + j                                    Change Focus To Down.
+		Tmux Ctrl + k                                    Change Focus To Up.
 
-		      # Terminal [Kitty]
-		      super + shift + equal                       Increase Font Size.
-		      super + shift + minus                       Decrease Font Size.
-		      ctrl  + shift + up                          Scroll up.
-		      ctrl  + shift + down                        Scroll down.
+		# Terminal [Kitty]
+		Kitty super + shift + equal                       Increase Font Size.
+		Kitty super + shift + minus                       Decrease Font Size.
+		Kitty ctrl  + shift + up                          Scroll up.
+		Kitty ctrl  + shift + down                        Scroll down.
 	EOF
 )
 
