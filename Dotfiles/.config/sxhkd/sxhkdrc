@@ -1,16 +1,18 @@
 super + w
-  $BROWSER
+    $BROWSER
 super + p
-  maim --selection ~/Photos/screenshot_\$(date +%Y-%m-%d_%H-%M-%S).png
+    maim --selection ~/Photos/screenshot_\$(date +%Y-%m-%d_%H-%M-%S).png
 super + shift + e
-  exit.sh
+    exit.sh
 super + {equal, minus, BackSpace}
-  volume.sh {up, down, toggle}
+    volume.sh {up, down, toggle}
 super + f
-  kitty -e yazi
+    kitty -e yazi
 super + b
-  burpsuite
+    burpsuite
 super + shift + m
-  keybindings.sh
+    keybindings.sh
 super + {F1, F2}
-  brightness.sh {inc, dec}
+    brightness.sh {inc, dec}
+super + space
+    layout.sh
