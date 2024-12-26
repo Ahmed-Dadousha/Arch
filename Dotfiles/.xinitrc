@@ -8,5 +8,8 @@ export BROWSER=firefox
 export TERMINAL=kitty
 export TERM=kitty
 export EDITOR=nvim
-
+# Stop Screen Saver
+xset -dpms
+xset s off
+# Start DWM
 exec dwm
