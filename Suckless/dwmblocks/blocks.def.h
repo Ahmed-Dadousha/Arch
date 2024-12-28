@@ -1,10 +1,11 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"", "echo 'Ahmed Mostafa Dadosha;'", 						0, 	 	0},
-	{"󰕾 ", "amixer get Master | grep -o '[0-9]*%' | head -n 1", 			1, 	 	0},
-	{" |  ", "sensors | awk '/Core 0/ {print $3}'",             			5, 		0},
+    //{"", "echo -e 'Ahmed;'",        						0, 	 	0},
+	{";󰕾 ", "amixer get Master | grep -o '[0-9]*%' | head -n 1", 			1, 	 	0},
+    //	{" |  ", "sensors | awk '/Core 0/ {print $3}'",             			5, 		0},
 	{" |  ", "setxkbmap -query | grep layout | awk '{print $2}'",			1,		0},
+	{" | ", "battery.sh",	                                                        1,		0},
 	{" | 󰸗 ", "date '+%d-%m-%Y (%a) 󰥔 %I:%M:%S:%p   '",				1,		0},
 };
 
