@@ -4,8 +4,8 @@ show_symlink = true
 ratio = [2,4,3]
 
 [preview]
-max_width  = 1500
-max_height = 1500
+max_width  = 600
+max_height = 900
 
 [opener]
 play = [
@@ -14,10 +14,13 @@ play = [
 edit = [
 	{run = 'nvim "$@"', block = true, for = "linux"},
 ]
-
+preview = [
+        {run = 'firefox "$@"', block = true, for = "linux"},
+]
 [open]
 rules = [
 	{mime = "video/*", use = "play"},
 	{mime = "audio/*", use = "play"},
+        {name = "*.pdf", use = "preview"},
 	{mime = "text/*",  use = "edit"},
 ]

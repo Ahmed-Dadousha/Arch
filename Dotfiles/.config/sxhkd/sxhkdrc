@@ -7,7 +7,7 @@ super + shift + e
 super + {equal, minus, BackSpace}
     volume.sh {up, down, toggle}
 super + f
-    kitty -e yazi
+    kitty -e doas yazi
 super + b
     burpsuite
 super + shift + m
@@ -16,3 +16,5 @@ super + {F1, F2}
     brightness.sh {inc, dec}
 super + space
     layout.sh
+super + m
+    mount.sh

@@ -1,10 +1,12 @@
 data=$(
-    cat <<-EOF
+	cat <<-EOF
 		Category        Keybinding                                   Difinition
 		# System Keybindings [Super = Enter]
 		System super + w                                    Open Browser.
 		System super + f                                    File Manager.
 		System super + b                                    Open Burpsuite.
+		System super + m                                    Mount a Device.
+		System super + shift + m                            Open Keybindings Manual.
 		System super + shift + b                            Toggle Top bar.
 		System super + p                                    Take a Screenshot With Selection.
 		System super + equal or minus or backspace          Volume.
