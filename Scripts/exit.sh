@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(echo -e "Shutdown\nReboot\nExit" | dmenu -fn "MesloLGS NF:size=15")
+choice=$(echo -e "Shutdown\nReboot\nExit" | dmenu -p "Action: ")
 
 [ "$choice" = "Shutdown" ] && doas poweroff
 [ "$choice" = "Reboot" ] && doas reboot
