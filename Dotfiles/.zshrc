@@ -121,13 +121,17 @@ alias cd="z"
 alias cat=bat
 alias vim=nvim
 alias dvim="doas nvim"
+alias ga="git add *"
+alias gc='git commit -m '
+alias gp="git push"
 alias srv="ssh adosha@hs.lan"
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='find . -type f'
+
 # File Manager Function
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-        yazi "$@" --cwd-file="$tmp"
+         yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
