@@ -1,5 +1,5 @@
 data=$(
-	cat <<-EOF
+    cat <<-EOF
 		Category        Keybinding                                   Difinition
 		# System Keybindings [Super = Enter]
 		System super + w                                    Open Browser.
@@ -33,6 +33,7 @@ data=$(
 		Tmux Prefix + |                                  Split Horizontal.
 		Tmux Perfix + -                                  Split Vertical.
 		Tmux Perfix + r                                  Reload Configurations.
+		Tmux Perfix + d                                  Detach current session.
 		Tmux Perfix + m                                  Minimize or Maximize.
 		Tmux Perfix + I                                  Install Plugins.
 		Tmux Perfix + c                                  Create a new window.

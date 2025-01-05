@@ -122,6 +122,7 @@ alias cat=bat
 alias vim=nvim
 alias dvim="doas nvim"
 alias ga="git add *"
+alias gs="git status"
 alias gc='git commit -m '
 alias gp="git push"
 alias srv="ssh adosha@hs.lan"
