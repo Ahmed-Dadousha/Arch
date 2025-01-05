@@ -18,3 +18,5 @@ super + space
     layout.sh
 super + m
     mount.sh
+super + o
+    obsidian
