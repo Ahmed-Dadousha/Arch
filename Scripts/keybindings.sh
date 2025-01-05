@@ -34,6 +34,13 @@ data=$(
 		Tmux Perfix + r                                  Reload Configurations.
 		Tmux Perfix + m                                  Minimize or Maximize.
 		Tmux Perfix + I                                  Install Plugins.
+		Tmux Perfix + c                                  Create a new window.
+		Tmux Perfix + ,                                  Rename a window.
+		Tmux Perfix + w                                  List all window.
+		Tmux Perfix + p                                  Previuous window.
+		Tmux Perfix + n                                  Next window.
+		Tmux Perfix + &                                  Close current window.
+		Tmux Perfix + [0...9]                            Select window by number.
 		Tmux Ctrl + h                                    Change Focus To Left.
 		Tmux Ctrl + l                                    Change Focus To Right.
 		Tmux Ctrl + j                                    Change Focus To Down.
