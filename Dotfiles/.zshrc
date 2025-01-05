@@ -127,7 +127,7 @@ export FZF_DEFAULT_COMMAND='find . -type f'
 # File Manager Function
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-        doas yazi "$@" --cwd-file="$tmp"
+        yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi

@@ -29,6 +29,7 @@ data=$(
 		DWM super + shift + Enter                        Move a Terminal To Stack.
 
 		# Tmux [Prefix = Ctrl + b]
+		Tmux Prefix + :                                  Enter Command mode.
 		Tmux Prefix + |                                  Split Horizontal.
 		Tmux Perfix + -                                  Split Vertical.
 		Tmux Perfix + r                                  Reload Configurations.
