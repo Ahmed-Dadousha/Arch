@@ -1,5 +1,5 @@
 data=$(
-    cat <<-EOF
+	cat <<-EOF
 		Category        Keybinding                                   Difinition
 		# System Keybindings [Super = Enter]
 		System super + w                                    Open Browser.
@@ -33,15 +33,17 @@ data=$(
 		Tmux Prefix + |                                  Split Horizontal.
 		Tmux Perfix + -                                  Split Vertical.
 		Tmux Perfix + r                                  Reload Configurations.
-		Tmux Perfix + d                                  Detach current session.
+		Tmux Perfix + d                                  Detache current session.
 		Tmux Perfix + m                                  Minimize or Maximize.
 		Tmux Perfix + I                                  Install Plugins.
 		Tmux Perfix + c                                  Create a new window.
+		Tmux Perfix + x                                  Kill current pane.
 		Tmux Perfix + ,                                  Rename a window.
 		Tmux Perfix + w                                  List all window.
-		Tmux Perfix + p                                  Previuous window.
+		Tmux Perfix + p                                  Previous window.
 		Tmux Perfix + n                                  Next window.
 		Tmux Perfix + &                                  Close current window.
+		Tmux Perfix + Ctrl + l                           Clear pane screen.
 		Tmux Perfix + [0...9]                            Select window by number.
 		Tmux Ctrl + h                                    Change Focus To Left.
 		Tmux Ctrl + l                                    Change Focus To Right.
@@ -53,6 +55,15 @@ data=$(
 		Kitty super + shift + minus                       Decrease Font Size.
 		Kitty ctrl  + shift + up                          Scroll up.
 		Kitty ctrl  + shift + down                        Scroll down.
+		Kitty ctrl  + l                                   Clear Terminal Screen.
+
+		# PDF Viewer [Zathura]
+		Zathura Ctrl + r                                  Toggle Theme.
+
+		# Image Viewer [Sxiv]
+		Sxiv n                                            Next Image.  
+		Sxiv p                                            Previous Image.  
+
 	EOF
 )
 
