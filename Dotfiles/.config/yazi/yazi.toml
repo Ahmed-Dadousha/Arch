@@ -15,7 +15,7 @@ edit = [
 	{run = 'nvim "$@"', block = true, for = "linux"},
 ]
 preview = [
-        {run = 'firefox "$@"', block = true, for = "linux"},
+        {run = 'zathura "$@"', block = true, for = "linux"},
 ]
 view = [
         {run = 'sxiv "$@"', block = true, for = "linux"},
