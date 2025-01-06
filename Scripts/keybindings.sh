@@ -63,6 +63,7 @@ data=$(
 		# Image Viewer [Sxiv]
 		Sxiv n                                            Next Image.  
 		Sxiv p                                            Previous Image.  
+		                Sxiv Enter                                        Toggle Mode.
 
 	EOF
 )

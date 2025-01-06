@@ -42,10 +42,11 @@ set render-loading              true
 set render-loading-fg           rgba(40,42,54,1)      # Background
 set render-loading-bg           rgba(248,248,242,1)   # Foreground
 
+set scrollbar-bg \#282828
+
 #
 # Recolor mode settings
 #
-
 set recolor-lightcolor          rgba(40,42,54,1)      # Background
 set recolor-darkcolor           rgba(248,248,242,1)   # Foreground
 
@@ -54,5 +55,6 @@ set recolor-darkcolor           rgba(248,248,242,1)   # Foreground
 #
 set adjust-open width
 set recolor true
+
 # Scrollbars
 set guioptions shv
