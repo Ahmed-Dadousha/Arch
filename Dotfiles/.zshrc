@@ -171,3 +171,7 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+# 
+function crtsh(){
+    curl -s "https://crt.sh/?q=$1" | grep -oP "(?<=<TD>)(\S+\.$1)(?=</TD>)" | sort -u
+}
