@@ -7,9 +7,9 @@ if [ -n "$usbs" ]; then
     #Choose a usb device
     usb=$(echo "$usbs" | dmenu -p "󱇰 USB Devices: ")
     # Get selected device name
-    usb_name=$(echo "$usb" | awk '{print $1}')
+    usb_name=$(echo "$usb" | awk '{print $2}')
     # Get Selected device label
-    usb_label=$(echo "$usb" | awk '{print $3}')
+    usb_label=$(echo "$usb" | awk '{print $4}')
 
     # If no devices selected exit
     [ -z "$usb" ] && exit
@@ -20,5 +20,5 @@ if [ -n "$usbs" ]; then
 
 else
     # If There is no usb devices
-    dmenu -p "No USB Devices."
+    dmenu -p "󱇰 No USB Devices."
 fi
