@@ -167,3 +167,7 @@ bindkey -M vicmd 'y' vi-yank-xclip
 #}
 #zle -N vi-paste vi-paste-xclip
 #bindkey -M vicmd 'p' vi-paste
+#
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
