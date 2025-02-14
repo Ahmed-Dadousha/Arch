@@ -43,6 +43,11 @@ data=$(
 		Tmux Perfix + p                                  Previous window.
 		Tmux Perfix + n                                  Next window.
 		Tmux Perfix + &                                  Close current window.
+		Tmux Perfix + h                                  Resize Left and Right.
+		Tmux Perfix + j                                  Resize Up nad Down.
+		Tmux Perfix + k                                  Resize Up nad Down.
+		Tmux Perfix + l                                  Resize Left and Right.
+
 		Tmux Perfix + Ctrl + l                           Clear pane screen.
 		Tmux Perfix + [0...9]                            Select window by number.
 		Tmux Ctrl + h                                    Change Focus To Left.
