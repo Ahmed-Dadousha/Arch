@@ -11,3 +11,4 @@ vim.keymap.set("n", "vG", "vG$", { desc = "Select All Of The Buffer From Bottom 
 vim.keymap.set("n", "vgg", "vgg0", { desc = "Select All Of The Buffer From Top To Bottom", silent = true })
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Go To Next Tab", silent = true })
 vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", { desc = "Go To Previous Tab", silent = true })
+vim.keymap.set("i", "<S-Tab>", "<C-d>", { noremap = true, desc = "Unindent", silent = true })
