@@ -13,3 +13,5 @@ xset -dpms
 xset s off
 # Start DWM
 exec dwm
+# Clear Screen After Exit DWM
+clear
