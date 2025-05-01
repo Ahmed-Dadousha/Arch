@@ -11,6 +11,8 @@ if [ -n "$usbs" ]; then
     # Get Selected device label
     usb_label=$(echo "$usb" | awk '{print $4}')
 
+    # Assign a name to selected device if it is empty
+    [ -z "$usb_label" ] || [ "$usb_label" == "/mnt/USB/New_Volume" ] && usb_label="New_Volume"
     # If no devices selected exit
     [ -z "$usb" ] && exit
     # Create a directory with selected device label and mount it to the directory
