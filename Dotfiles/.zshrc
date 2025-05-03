@@ -110,7 +110,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#808080'
 unalias -a
 alias ls="lsd -F"
-alias ll="lsd -lahF"
+alias ll="lsd -lahFA"
 alias cls=clear
 alias i="doas pacman -S --noconfirm --needed" 
 alias r="doas pacman -Rsc --noconfirm"
