@@ -2,7 +2,7 @@
 # Get avilable usb block devices
 usbs=$(ls -lahF /sys/block | rg usb | cut -d '/' -f 12 | xargs -I {} lsblk --output NAME,SIZE,LABEL,MOUNTPOINT /dev/{} | rg 'sd[a-z]+[0-9]+' | sed 's/^../󰕓 /')
 # Get avilable phone devices
-phones=$(simple-mtpfs -l)
+phones=$(simple-mtpfs -l 2>/dev/null)
 
 # Add phone devices to usb devices if exists
 if [ -n "$phones" ]; then
@@ -44,10 +44,10 @@ if [ -n "$devices" ]; then
 		# Create a directory with selected device label and mount it to the directory
 		[ ! -d "/mnt/USB/$usb_label" ] && mkdir "/mnt/USB/$usb_label" && doas mount "/dev/$usb_name" "/mnt/USB/$usb_label" && exit
 		# Unmount the selected device and remove the its directory
-		[ -d "/mnt/USB/$usb_label" ] && doas umount "/dev/$usb_name" && doas rm -rf "/mnt/USB/$usb_label" && exit
+		[ -d "/mnt/USB/$usb_label" ] && doas umount "/dev/$usb_name" && doas rm -rf "/mnt/USB/$usb_label"
 	fi
 
 else
 	# If There is no usb devices
-	dmenu -p "󱇰 No USB Devices."
+	echo -e "" | sed '/^$/d' | dmenu -p "󱇰 No USB Devices."
 fi
