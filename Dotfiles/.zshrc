@@ -126,6 +126,7 @@ alias gs="git status"
 alias gc='git commit -m '
 alias gp="git push"
 alias srv="ssh adosha@hs.lan"
+alias timeshift="doas timeshift-gtk &"
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='find . -type f'
 
