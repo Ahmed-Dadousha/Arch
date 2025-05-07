@@ -12,6 +12,6 @@ export EDITOR=nvim
 xset -dpms
 xset s off
 # Start DWM
-exec dwm
+exec dwm &> /dev/null
 # Clear Screen After Exit DWM
 clear
