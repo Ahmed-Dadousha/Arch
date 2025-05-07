@@ -1,7 +1,7 @@
 # Screen Resolution
 xrandr -s 1920x1080
 # Keyboard Layout
-setxkbmap -layout us -option caps:escape
+setxkbmap -option caps:escape
 # Enviroment Variables
 export PATH=$PATH:/home/$USER/.local/bin:/home/$USER/Source/Scripts:/home/$USER/go/bin
 export BROWSER=firefox
