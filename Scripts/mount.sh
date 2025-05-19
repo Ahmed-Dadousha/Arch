@@ -6,48 +6,52 @@ phones=$(simple-mtpfs -l 2>/dev/null)
 
 # Add phone devices to usb devices if exists
 if [ -n "$phones" ]; then
-	# Add mountpoint to a phone device
-	[ -d "/mnt/Phone" ] && mounted="/mnt/Phone"
+    # Add mountpoint to a phone device
+    if [ -n "$(ls -A /mnt/Phone)" ]; then
+        mounted="/mnt/Phone"
+    fi
 
-	devices=$(echo -e "$usbs\n $phones $mounted" | sed '/^$/d')
+    devices=$(echo -e "$usbs\n $phones $mounted" | sed '/^$/d')
 else
-	devices="$usbs"
+    devices="$usbs"
 fi
 
 # If there is at least a device
 if [ -n "$devices" ]; then
-	#Choose a usb device
-	device=$(echo -e "$devices" | dmenu -p "󱇰 USB Devices: ")
-	letter=$(echo "$device" | cut -d " " -f 1)
+    #Choose a usb device
+    device=$(echo -e "$devices" | dmenu -p "󱇰 USB Devices: ")
+    letter=$(echo "$device" | cut -d " " -f 1)
 
-	# If the user choosed a phone device
-	if [ "$letter" = "" ]; then
-		if [ -d "/mnt/Phone" ]; then
-			# Unmount the selected phone device
-			fusermount -u "/mnt/Phone"
-			doas rmdir "/mnt/Phone"
-		else
-			# Mount the selected pjone device
-			doas mkdir "/mnt/Phone" && doas chown adosha:adosha "/mnt/Phone"
-			simple-mtpfs --device 1 "/mnt/Phone"
-		fi
+    # If the user choosed a phone device
+    if [ "$letter" = "" ]; then
+        if [ -z "$(ls -A /mnt/Phone)" ]; then
 
-	# If the user choosed a usb device
-	elif [ "$letter" = "󰕓" ]; then
-		# Get selected device name
-		usb_name=$(echo "$device" | awk '{print $2}')
-		# Get Selected device label
-		usb_label=$(echo "$device" | awk '{print $4}')
+            # Mount the selected pjone device
+            # doas mkdir "/mnt/Phone" && doas chown adosha:adosha "/mnt/Phone"
+            simple-mtpfs --device 1 "/mnt/Phone"
 
-		# Assign a name to selected device if it is empty
-		[ -z "$usb_label" ] || [ "$usb_label" == "/mnt/USB/New_Volume" ] && usb_label="New_Volume"
-		# Create a directory with selected device label and mount it to the directory
-		[ ! -d "/mnt/USB/$usb_label" ] && mkdir "/mnt/USB/$usb_label" && doas mount "/dev/$usb_name" "/mnt/USB/$usb_label" && exit
-		# Unmount the selected device and remove the its directory
-		[ -d "/mnt/USB/$usb_label" ] && doas umount "/dev/$usb_name" && doas rm -rf "/mnt/USB/$usb_label"
-	fi
+        else
+            # Unmount the selected phone device
+            fusermount -u "/mnt/Phone"
+            # doas rmdir "/mnt/Phone"
+        fi
+
+    # If the user choosed a usb device
+    elif [ "$letter" = "󰕓" ]; then
+        # Get selected device name
+        usb_name=$(echo "$device" | awk '{print $2}')
+        # Get Selected device label
+        usb_label=$(echo "$device" | awk '{print $4}')
+
+        # Assign a name to selected device if it is empty
+        [ -z "$usb_label" ] || [ "$usb_label" == "/mnt/USB/New_Volume" ] && usb_label="New_Volume"
+        # Create a directory with selected device label and mount it to the directory
+        [ ! -d "/mnt/USB/$usb_label" ] && mkdir "/mnt/USB/$usb_label" && doas mount "/dev/$usb_name" "/mnt/USB/$usb_label" && exit
+        # Unmount the selected device and remove the its directory
+        [ -d "/mnt/USB/$usb_label" ] && doas umount "/dev/$usb_name" && doas rm -rf "/mnt/USB/$usb_label"
+    fi
 
 else
-	# If There is no usb devices
-	echo -e "" | sed '/^$/d' | dmenu -p "󱇰 No USB Devices."
+    # If There is no usb devices
+    echo -e "" | sed '/^$/d' | dmenu -p "󱇰 No USB Devices."
 fi
