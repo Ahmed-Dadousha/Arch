@@ -1,5 +1,5 @@
 data=$(
-	cat <<-EOF
+    cat <<-EOF
 		Category        Keybinding                                   Difinition
 		# System Keybindings [Super = Enter]
 		System super + w                                    Open Browser.
@@ -61,6 +61,7 @@ data=$(
 		Kitty ctrl  + shift + up                          Scroll up.
 		Kitty ctrl  + shift + down                        Scroll down.
 		Kitty ctrl  + l                                   Clear Terminal Screen.
+		                Kitty ctrl  + r                                   Run FZF on History to current command.
 
 		# PDF Viewer [Zathura]
 		Zathura Ctrl + r                                  Toggle Theme.
