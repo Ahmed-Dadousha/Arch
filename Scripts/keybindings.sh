@@ -1,5 +1,5 @@
 data=$(
-    cat <<-EOF
+	cat <<-EOF
 		Category        Keybinding                                   Difinition
 		# System Keybindings [Super = Enter]
 		System super + w                                    Open Browser.
@@ -47,7 +47,6 @@ data=$(
 		Tmux Perfix + j                                  Resize Up nad Down.
 		Tmux Perfix + k                                  Resize Up nad Down.
 		Tmux Perfix + l                                  Resize Left and Right.
-
 		Tmux Perfix + Ctrl + l                           Clear pane screen.
 		Tmux Perfix + [0...9]                            Select window by number.
 		Tmux Ctrl + h                                    Change Focus To Left.
@@ -61,7 +60,9 @@ data=$(
 		Kitty ctrl  + shift + up                          Scroll up.
 		Kitty ctrl  + shift + down                        Scroll down.
 		Kitty ctrl  + l                                   Clear Terminal Screen.
-		                Kitty ctrl  + r                                   Run FZF on History to current command.
+		Kitty ctrl  + r                                   Fuzzy find through the shell history.
+		Kitty ctrl  + t                                   Fuzzy find all files and subdirectories of the working directory.
+		Kitty alt   + c                                   Fuzzy find all subdirectories of the working directory, and cd to output.
 
 		# PDF Viewer [Zathura]
 		Zathura Ctrl + r                                  Toggle Theme.
@@ -69,7 +70,7 @@ data=$(
 		# Image Viewer [Sxiv]
 		Sxiv n                                            Next Image.  
 		Sxiv p                                            Previous Image.  
-		                Sxiv Enter                                        Toggle Mode.
+		Sxiv Enter                                        Toggle Mode.
 
 	EOF
 )
