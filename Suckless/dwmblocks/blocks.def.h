@@ -2,7 +2,7 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	   //{"", "echo -e 'Ahmed;'",        						0, 	 	0},
-	{"Ahmed Mostafa Dadosha;󰕾 ", "amixer get Master | grep -o '[0-9]*%' | head -n 1", 			1, 	 	0},
+	{"Ahmed Mostafa Dadosha; ", "cat /opt/vol", 			1, 	 	0},
 	   //	{" |  ", "sensors | awk '/Core 0/ {print $3}'",             			5, 		0},
 	{" |  ", "setxkbmap -query | grep layout | awk '{print $2}'",			1,		0},
 	{" | ", "battery.sh",	                                                        1,		0},
